@@ -14,6 +14,25 @@ class Observable<T> {
         observers.append(observer)
     }
 
+    func subscribe(onNext: ((Event<T>) -> Void)? = nil,
+                   onError: ((Event<Error>) -> Void)? = nil,
+                   onCompleted: (() -> Void)? = nil) {
+        let observer = Observer<T> { event in
+            switch event {
+            case .next(let val):
+                print("next event, val: \(val)")
+                break
+            case .error(let error):
+                print("error event, error: \(error)")
+                break
+            case .completed:
+                print("completed event")
+                break
+            }
+        }
+        subscribe(observer: observer)
+    }
+
     func onNext(val: T) {
         observers.forEach { $0.on(.next(val)) }
     }
