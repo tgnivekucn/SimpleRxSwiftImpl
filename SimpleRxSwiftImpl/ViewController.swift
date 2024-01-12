@@ -28,6 +28,18 @@ class ViewController: UIViewController {
         observable.onNext(val: 1)
         observable.onNext(val: 2)
         observable.onCompleted()
+        
+        observable.subscribe(onNext: { val in
+            print("got next event, val is: \(val)")
+        }, onError: { error in
+            print("got error event, error is: \(error)")
+        }, onCompleted: {
+            print("got completed event")
+        })
+        
+        observable.onNext(val: 5)
+        observable.onNext(val: 6)
+        observable.onCompleted()
     }
 }
 
