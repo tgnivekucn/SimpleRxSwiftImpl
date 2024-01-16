@@ -8,6 +8,8 @@
 import UIKit
 
 class ViewController: UIViewController {
+    private var disposeBag: DisposeBag = DisposeBag()
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -34,7 +36,7 @@ class ViewController: UIViewController {
             print("got error event, error is: \(error)")
         }, onCompleted: {
             print("got completed event")
-        })
+        }).disposed(by: disposeBag)
         
         observable.onNext(val: 5)
         observable.onNext(val: 6)

@@ -13,4 +13,14 @@ class DisposeBag {
     func insert(_ disposable: Disposable) {
         self.disposables.append(disposable)
     }
+
+    private func dispose() -> [Disposable] {
+        let disposables = self.disposables
+        self.disposables.removeAll(keepingCapacity: false)
+        return disposables
+    }
+
+    deinit {
+        self.dispose()
+    }
 }
