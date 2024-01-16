@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2F2D01C82B5686AE00E7D20A /* Disposable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2D01C72B5686AE00E7D20A /* Disposable.swift */; };
+		2F2D01CA2B5686FC00E7D20A /* DisposeBag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2D01C92B5686FC00E7D20A /* DisposeBag.swift */; };
 		2F3BE9672B4E9ED800355C18 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3BE9662B4E9ED800355C18 /* AppDelegate.swift */; };
 		2F3BE9692B4E9ED800355C18 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3BE9682B4E9ED800355C18 /* SceneDelegate.swift */; };
 		2F3BE96B2B4E9ED800355C18 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3BE96A2B4E9ED800355C18 /* ViewController.swift */; };
@@ -19,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2F2D01C72B5686AE00E7D20A /* Disposable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Disposable.swift; sourceTree = "<group>"; };
+		2F2D01C92B5686FC00E7D20A /* DisposeBag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisposeBag.swift; sourceTree = "<group>"; };
 		2F3BE9632B4E9ED800355C18 /* SimpleRxSwiftImpl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleRxSwiftImpl.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F3BE9662B4E9ED800355C18 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2F3BE9682B4E9ED800355C18 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -80,6 +84,8 @@
 				2F3BE97E2B4E9F1200355C18 /* Event.swift */,
 				2F3BE97A2B4E9EF000355C18 /* Observable.swift */,
 				2F3BE97C2B4E9EF800355C18 /* Observer.swift */,
+				2F2D01C72B5686AE00E7D20A /* Disposable.swift */,
+				2F2D01C92B5686FC00E7D20A /* DisposeBag.swift */,
 			);
 			path = simpleRx;
 			sourceTree = "<group>";
@@ -159,7 +165,9 @@
 				2F3BE97D2B4E9EF800355C18 /* Observer.swift in Sources */,
 				2F3BE96B2B4E9ED800355C18 /* ViewController.swift in Sources */,
 				2F3BE9672B4E9ED800355C18 /* AppDelegate.swift in Sources */,
+				2F2D01CA2B5686FC00E7D20A /* DisposeBag.swift in Sources */,
 				2F3BE97F2B4E9F1200355C18 /* Event.swift in Sources */,
+				2F2D01C82B5686AE00E7D20A /* Disposable.swift in Sources */,
 				2F3BE9692B4E9ED800355C18 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

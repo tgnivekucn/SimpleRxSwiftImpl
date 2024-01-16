@@ -10,13 +10,14 @@ import Foundation
 class Observable<T> {
     private var observers: [Observer<T>] = []
 
-    func subscribe(observer: Observer<T>) {
+    func subscribe(observer: Observer<T>) -> Disposable {
         observers.append(observer)
+        return Disposables().create()
     }
 
     func subscribe(onNext: ((Event<T>) -> Void)? = nil,
                    onError: ((Event<Error>) -> Void)? = nil,
-                   onCompleted: (() -> Void)? = nil) {
+                   onCompleted: (() -> Void)? = nil) -> Disposable {
         let observer = Observer<T> { event in
             switch event {
             case .next(let val):
@@ -30,7 +31,7 @@ class Observable<T> {
                 break
             }
         }
-        subscribe(observer: observer)
+        return subscribe(observer: observer)
     }
 
     func onNext(val: T) {
